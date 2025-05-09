@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String nombre, apellidos, documento, telefono, correo;
+        int opcion;
 
         System.out.println("Por favor ingrese su nombre:");
         nombre = sc.nextLine();
@@ -23,51 +24,40 @@ public class Main {
 
         limpiarPantalla();
         System.out.println("Para ti " + nombre + " " + apellidos + " tenemos las siguientes opciones\n");
-        pausar();
 
-        mostrarOpcion("1. Asistente administrativo:",
-                "El egresado estará en capacidad de asistir procesos operativos de planeación, organización, dirección y control...");
+        System.out.println("1. Asistente administrativo");
+        System.out.println("2. Asistente contable");
+        System.out.println("3. Desarrollo de Software");
+        System.out.println("4. Diseño Gráfico");
+        System.out.println("5. Primera Infancia");
+        System.out.println("6. Seguridad laboral");
+        System.out.println("7. Talento Humano");
+        System.out.println("8. Mercadeo");
+        
+        System.out.print("\nPor favor selecciona una opción (1-8): ");
+        opcion = sc.nextInt();
 
-        mostrarOpcion("2. Asistente contable:",
-                "El egresado estará en capacidad de tramitar y procesar información contable, financiera, de costos...");
-
-        mostrarOpcion("3. Desarrollo de Software:",
-                "El egresado tendrá las competencias para asistir el desarrollo de aplicativos tipo web y para dispositivos móviles...");
-
-        mostrarOpcion("4. Diseño Gráfico:",
-                "El egresado contará con las competencias para asistir el proceso de diseño de proyectos gráficos...");
-
-        mostrarOpcion("5. Primera Infancia:",
-                "El egresado estará en capacidad de apoyar el desarrollo integral de la primera infancia...");
-
-        mostrarOpcion("6. Seguridad laboral:",
-                "El egresado podrá desempeñarse como Auxiliar de Seguridad y Salud en el Trabajo...");
-
-        mostrarOpcion("7. Talento Humano:",
-                "El egresado estará en capacidad de recopilar, actualizar y tramitar información de los procesos de gestión humana...");
-
-        mostrarOpcion("8. Mercadeo:",
-                "El egresado estará en capacidad de apoyar operativamente la gestión de las variables de la mezcla del mercadeo...");
-
-        sc.close();
-    }
-
-    public static void mostrarOpcion(String titulo, String descripcion) {
-        System.out.println(titulo);
-        System.out.println();
-        System.out.println(descripcion);
-        System.out.println();
-        pausar();
-    }
-
-    public static void pausar() {
-        System.out.println("Presione ENTER para continuar...");
-        try {
-            System.in.read();
-            System.in.skip(System.in.available());
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (opcion == 1) {
+            System.out.println("El egresado estará en capacidad de asistir procesos operativos de planeación, organización, dirección y control...");
+        } else if (opcion == 2) {
+            System.out.println("El egresado estará en capacidad de tramitar y procesar información contable, financiera, de costos...");
+        } else if (opcion == 3) {
+            System.out.println("El egresado tendrá las competencias para asistir el desarrollo de aplicativos tipo web y para dispositivos móviles...");
+        } else if (opcion == 4) {
+            System.out.println("El egresado contará con las competencias para asistir el proceso de diseño de proyectos gráficos...");
+        } else if (opcion == 5) {
+            System.out.println("El egresado estará en capacidad de apoyar el desarrollo integral de la primera infancia...");
+        } else if (opcion == 6) {
+            System.out.println("El egresado podrá desempeñarse como Auxiliar de Seguridad y Salud en el Trabajo...");
+        } else if (opcion == 7) {
+            System.out.println("El egresado estará en capacidad de recopilar, actualizar y tramitar información de los procesos de gestión humana...");
+        } else if (opcion == 8) {
+            System.out.println("El egresado estará en capacidad de apoyar operativamente la gestión de las variables de la mezcla del mercadeo...");
+        } else {
+            System.out.println(" Opción no válida. Por favor, selecciona un número entre 1 y 8.");
         }
+        
+        sc.close(); 
     }
 
     public static void limpiarPantalla() {
@@ -76,6 +66,7 @@ public class Main {
         }
     }
 }
+
 
 // Integrantes del proyecto:
 
